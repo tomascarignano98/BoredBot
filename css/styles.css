@@ -3,11 +3,10 @@
 /* Global variables*/
 
 :root {
-  --clr-primary: #396caa;
-  --clr-headings: #30598c;
-  --clr-body: #394755;
-  --clr-accent: #ff952d;
-  --clr-accent-focus: #e06f00;
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-body: #ced5de;
 }
 
 /* Universal Selector */
@@ -23,7 +22,7 @@
 /* Typography */
 
 ::selection {
-  background: var(--clr-primary);
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -33,27 +32,126 @@ html {
 
 body {
   background-color: #fff;
-  color: var(--clr-body);
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
 h1,
 h2,
-h3,
 p {
   margin: 0;
+  max-width: 47ch;
+}
+h1,
+h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+  line-height: 1;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 6rem;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 4rem;
 }
 
-h3 {
-  font-size: 1.17em;
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+/* Components 
+---------------- */
+
+/* Buttons  */
+
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 3rem 0 0;
+  padding: 2rem 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: #ec3000;
+}
+
+/* Blocks */
+
+.block {
+  --padding-vertical: 5rem;
+  padding: 5rem 2rem;
+}
+
+.block__header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.block--dark {
+  background: #000;
+}
+
+.block--skewed-left {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100vw - 20px);
+  max-width: 1140px;
+}
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Hero */
+
+.hero {
+  min-height: 90vh;
+}
+
+.hero__tagline {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    text-align: left;
+  }
+}
+
+/* Fetch Results */
+
+.fetch-results {
+  align-self: center;
 }

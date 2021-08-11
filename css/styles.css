@@ -1,0 +1,59 @@
+@import "./normalize.css";
+
+/* Global variables*/
+
+:root {
+  --clr-primary: #396caa;
+  --clr-headings: #30598c;
+  --clr-body: #394755;
+  --clr-accent: #ff952d;
+  --clr-accent-focus: #e06f00;
+}
+
+/* Universal Selector */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+
+::selection {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: var(--clr-body);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}

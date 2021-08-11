@@ -3,9 +3,8 @@
 /* Global variables*/
 
 :root {
-  --color-primary: #2584ff;
-  --color-secondary: #00d9ff;
-  --color-accent: #ff3400;
+  --color-accent: #e13d4f;
+  --color-accent-darker: #e0243a;
   --color-body: #ced5de;
 }
 
@@ -46,17 +45,18 @@ p {
 }
 h1,
 h2 {
-  color: #fff;
   margin-bottom: 2rem;
   line-height: 1;
 }
 
 h1 {
+  color: #fff;
   font-size: 6rem;
 }
 
 h2 {
-  font-size: 4rem;
+  color: #0092a0;
+  font-size: 3rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -93,13 +93,12 @@ h2 {
 }
 
 .btn--accent:hover {
-  background: #ec3000;
+  background: var(--color-accent-darker);
 }
 
 /* Blocks */
 
 .block {
-  --padding-vertical: 5rem;
   padding: 5rem 2rem;
 }
 
@@ -113,18 +112,18 @@ h2 {
 }
 
 .block--skewed-left {
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+  padding-bottom: 9rem;
 }
 
 .container {
   margin: 0 auto;
-  width: calc(100vw - 20px);
   max-width: 1140px;
 }
 
 .grid {
   display: grid;
+  row-gap: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -154,4 +153,12 @@ h2 {
 
 .fetch-results {
   align-self: center;
+  justify-self: center;
+}
+
+/* Activities */
+
+.activity {
+  font-size: 0.8em;
+  color: var(--color-body);
 }

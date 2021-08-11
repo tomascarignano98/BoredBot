@@ -3,7 +3,7 @@ const type = document.querySelector("#activity-type");
 const participants = document.querySelector("#activity-participants");
 
 document.querySelector("#btn").addEventListener("click", () => {
-  fetch("http://www.boredapi.com/api/activity")
+  fetch("https://www.boredapi.com/api/activity")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
